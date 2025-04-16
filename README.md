@@ -67,18 +67,6 @@ symfony console make:controller
 symfony console make:migration
 symfony console doctrine:migrations:migrate
 ```
-
----
-
-## 🌐 Deployment
-
-> Update `.env.local` for production and run:
-
-```bash
-composer install --no-dev --optimize-autoloader
-symfony console cache:clear --env=prod
-```
-
 ---
 
 ## 👨‍💻 Author
