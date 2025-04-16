@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block body %}
+    <h1 class="mb-4">{{ title }}</h1>
+
+    <div class="card p-4 shadow-sm">
+        {{ form_start(form) }}
+            <div class="mb-3">
+                {{ form_label(form.title) }}
+                {{ form_widget(form.title) }}
+                {{ form_errors(form.title) }}
+            </div>
+
+            <div class="mb-3">
+                {{ form_label(form.content) }}
+                {{ form_widget(form.content) }}
+                {{ form_errors(form.content) }}
+            </div>
+
+            <button class="btn btn-success">{{ button_label }}</button>
+        {{ form_end(form) }}
+    </div>
+
+    <a href="{{ path('note_index') }}" class="btn btn-secondary mt-3">Back</a>
+{% endblock %}
