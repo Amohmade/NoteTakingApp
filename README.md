@@ -43,10 +43,8 @@ symfony server:start
 |--------|--------------------|--------------|-----------------------|
 | GET    | /note              | note_index   | List all notes        |
 | GET    | /note/new          | note_new     | Create a new note     |
-| POST   | /note/new          | note_new     | Submit new note form  |
 | GET    | /note/{id}         | note_show    | Show single note      |
 | GET    | /note/{id}/edit    | note_edit    | Edit a note form      |
-| POST   | /note/{id}/edit    | note_edit    | Submit edit form      |
 | POST   | /note/{id}/delete  | note_delete  | Delete a note         |
 
 ---
