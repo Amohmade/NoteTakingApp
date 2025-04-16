@@ -37,6 +37,20 @@ symfony server:start
 
 ---
 
+## 🧭 Routes
+
+| Method | Path               | Name         | Description           |
+|--------|--------------------|--------------|-----------------------|
+| GET    | /note              | note_index   | List all notes        |
+| GET    | /note/new          | note_new     | Create a new note     |
+| POST   | /note/new          | note_new     | Submit new note form  |
+| GET    | /note/{id}         | note_show    | Show single note      |
+| GET    | /note/{id}/edit    | note_edit    | Edit a note form      |
+| POST   | /note/{id}/edit    | note_edit    | Submit edit form      |
+| POST   | /note/{id}/delete  | note_delete  | Delete a note         |
+
+---
+
 ## 🛠 Configuration
 
 ### Database
@@ -49,11 +63,11 @@ DATABASE_URL="mysql://root:password@127.0.0.1:3306/notes?serverVersion=8.0.32"
 ## ✅ Commands
 
 ```bash
-php bin/console make:entity
-php bin/console make:form
-php bin/console make:controller
-php bin/console make:migration
-php bin/console doctrine:migrations:migrate
+symfony console make:entity
+symfony console make:form
+symfony console make:controller
+symfony console make:migration
+symfony console doctrine:migrations:migrate
 ```
 
 ---
@@ -64,7 +78,7 @@ php bin/console doctrine:migrations:migrate
 
 ```bash
 composer install --no-dev --optimize-autoloader
-php bin/console cache:clear --env=prod
+symfony console cache:clear --env=prod
 ```
 
 ---
