@@ -34,11 +34,6 @@ symfony server:start
 ## 🧩 Features
 
 - CRUD (Create, Read, Update, Delete) notes
-- Form validation with Symfony Validator
-- CSRF protection on forms
-- Twig templates styled with Bootstrap 5
-- Entity auto-loading using route parameters
-- `NoteFormatter` service for formatted views
 
 ---
 
@@ -48,15 +43,8 @@ symfony server:start
 
 Configure your database in `.env.local`:
 ```dotenv
-DATABASE_URL="mysql://root:password@127.0.0.1:3306/note_app?serverVersion=8.0.32"
+DATABASE_URL="mysql://root:password@127.0.0.1:3306/notes?serverVersion=8.0.32"
 ```
-
-If using SQLite:
-```dotenv
-DATABASE_URL="sqlite:///%kernel.project_dir%/var/data.db"
-```
-
----
 
 ## ✅ Commands
 
